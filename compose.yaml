@@ -10,7 +10,7 @@ services:
       traefik.http.routers.traefik.rule: "Host(`traefik.opcode.ovh`)"
     networks:
       default: ~
-      phpcon-dev: ~
+      opcode: ~
     volumes:
       - ./traefik.toml:/etc/traefik/traefik.toml
       - ./configs/:/etc/traefik/configs/
@@ -26,5 +26,5 @@ services:
       retries: 5
 
 networks:
-  phpcon-dev:
+  opcode:
     external: true
