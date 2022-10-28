@@ -14,7 +14,7 @@ stop: ## Stop application (will preserve state of the application)
 	docker compose stop
 
 create-network: ## create custom gr-dev network if now exist (it is required to gr-dev.me domain to work properly)
-	docker network ls|grep phpcon-dev > /dev/null || docker network create phpcon-dev
+	docker network ls|grep opcode > /dev/null || docker network create opcode
 create-loopback: ## Setup network loopback for mac environments
 	if [ ! -f /etc/systemd/system/loopback-alias.service ]; then sudo ./add-alias-linux.sh; fi
 
